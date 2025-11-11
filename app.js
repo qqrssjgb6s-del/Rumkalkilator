@@ -41,18 +41,38 @@ document.addEventListener('DOMContentLoaded', ()=>{
 });
 
 // === Raum hinzufügen ===
+// === Raum hinzufügen ===
 function onAddRoom(){
-  try{
-    const tpl = q('#roomTemplate');
-    const node = tpl.content.firstElementChild.cloneNode(true);
-    q('#rooms').appendChild(node);
-    rooms.push(node);
-    calcAll();
-    showMsg('Raum hinzugefügt.');
-  } catch(e){
-    showMsg('Fehler beim Hinzufügen des Raums.', true);
-    console.error(e);
-  }
+    try {
+        const tpl = q('#roomTemplate');
+        const node = tpl.content.firstElementChild.cloneNode(true);
+
+        // 🗑️ Lösch-Button hinzufügen
+        const deleteBtn = document.createElement('button');
+        deleteBtn.textContent = 'Raum löschen';
+        deleteBtn.classList.add('delete-room');
+        deleteBtn.style.background = '#e74c3c';
+        deleteBtn.style.color = 'white';
+        deleteBtn.style.border = 'none';
+        deleteBtn.style.padding = '6px 10px';
+        deleteBtn.style.borderRadius = '6px';
+        deleteBtn.style.marginTop = '8px';
+        deleteBtn.onclick = () => {
+            node.remove();
+            calcAll(); // alles neu berechnen
+            showMsg('Raum gelöscht.');
+        };
+
+        node.appendChild(deleteBtn); // Button an Raum anhängen
+
+        q('#rooms').appendChild(node);
+        rooms.push(node);
+        calcAll();
+        showMsg('Raum hinzugefügt.');
+    } catch(e) {
+        showMsg('Fehler beim Hinzufügen des Raums.');
+        console.error(e);
+    }
 }
 
 // === Bilder hinzufügen ===

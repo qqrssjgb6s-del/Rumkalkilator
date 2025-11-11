@@ -1,42 +1,42 @@
-
 <!DOCTYPE html>
 <html lang="de">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Raum-Reinigung Kalkulator + KI – v3 (kompatibel)</title>
-<style>
-  :root { --pad: 12px; --radius: 12px; }
-  * { box-sizing: border-box; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; }
-  body { margin: 0; background:#f6f7fb; color:#102027; }
-  header { position: sticky; top: 0; z-index: 5; background: #0d47a1; color: #fff; padding: 14px var(--pad); box-shadow: 0 2px 8px rgba(0,0,0,.15); }
-  header h1 { margin: 0; font-size: 18px; }
-  .wrap { padding: var(--pad); max-width: 980px; margin: 0 auto; }
-  .card { background:#fff; border-radius: var(--radius); padding: var(--pad); margin: 10px 0 16px; box-shadow: 0 4px 12px rgba(0,0,0,.08); }
-  .row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
-  .row-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; }
-  .row-4 { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 10px; }
-  @media (max-width: 720px) { .row, .row-3, .row-4 { grid-template-columns: 1fr; } }
-  label { font-size: 13px; color:#37474f; display:block; margin-bottom: 6px; }
-  input[type="text"], input[type="number"], input[type="url"], select { width: 100%; padding: 12px; border-radius: 10px; border: 1px solid #cfd8dc; background: #fff; }
-  input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
-  .btn { appearance:none; border:0; padding:12px 14px; border-radius: 10px; background:#0d47a1; color:#fff; font-weight:600; }
-  .btn.secondary { background: #455a64; }
-  .btn.ghost { background: transparent; color:#0d47a1; border: 1px solid #0d47a1; }
-  .btn.flat { background:#eceff1; color:#263238; }
-  .muted { color:#607d8b; font-size:13px; }
-  .room { border:1px solid #e0e0e0; border-radius: 12px; padding: 12px; margin-top: 10px; }
-  .room h3 { margin: 0 0 8px; font-size: 16px; }
-  .thumbs { display:flex; gap:8px; overflow:auto; padding-bottom: 6px; }
-  .thumbs img { height: 64px; width: 64px; object-fit: cover; border-radius: 8px; border:1px solid #eceff1; }
-  .total { font-size: 22px; font-weight: 800; }
-  .right { text-align:right; }
-  .line { display:flex; justify-content: space-between; align-items:center; gap:8px; margin: 6px 0; }
-  .divider { height:1px; background:#eceff1; margin: 10px 0; }
-  .footer-note { text-align:center; color:#78909c; font-size:12px; padding: 10px 0 30px; }
-  .hint { font-size:12px; color:#546e7a; }
-  .danger { color:#b00020; }
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Raum-Reinigung Kalkulator + KI – v3 (GitHub Pages kompatibel)</title>
+  <link rel="icon" href="data:,">
+  <style>
+    :root { --pad: 12px; --radius: 12px; }
+    * { box-sizing: border-box; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; }
+    body { margin: 0; background:#f6f7fb; color:#102027; }
+    header { position: sticky; top: 0; z-index: 5; background: #0d47a1; color: #fff; padding: 14px var(--pad); box-shadow: 0 2px 8px rgba(0,0,0,.15); }
+    header h1 { margin: 0; font-size: 18px; }
+    .wrap { padding: var(--pad); max-width: 980px; margin: 0 auto; }
+    .card { background:#fff; border-radius: var(--radius); padding: var(--pad); margin: 10px 0 16px; box-shadow: 0 4px 12px rgba(0,0,0,.08); }
+    .row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+    .row-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; }
+    .row-4 { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 10px; }
+    @media (max-width: 720px) { .row, .row-3, .row-4 { grid-template-columns: 1fr; } }
+    label { font-size: 13px; color:#37474f; display:block; margin-bottom: 6px; }
+    input[type="text"], input[type="number"], input[type="url"], select { width: 100%; padding: 12px; border-radius: 10px; border: 1px solid #cfd8dc; background: #fff; }
+    input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+    .btn { appearance:none; border:0; padding:12px 14px; border-radius: 10px; background:#0d47a1; color:#fff; font-weight:600; cursor:pointer; }
+    .btn.secondary { background: #455a64; }
+    .btn.ghost { background: transparent; color:#0d47a1; border: 1px solid #0d47a1; }
+    .btn.flat { background:#eceff1; color:#263238; }
+    .muted { color:#607d8b; font-size:13px; }
+    .room { border:1px solid #e0e0e0; border-radius: 12px; padding: 12px; margin-top: 10px; }
+    .room h3 { margin: 0 0 8px; font-size: 16px; }
+    .thumbs { display:flex; gap:8px; overflow:auto; padding-bottom: 6px; }
+    .thumbs img { height: 64px; width: 64px; object-fit: cover; border-radius: 8px; border:1px solid #eceff1; }
+    .total { font-size: 22px; font-weight: 800; }
+    .right { text-align:right; }
+    .line { display:flex; justify-content: space-between; align-items:center; gap:8px; margin: 6px 0; }
+    .divider { height:1px; background:#eceff1; margin: 10px 0; }
+    .footer-note { text-align:center; color:#78909c; font-size:12px; padding: 10px 0 30px; }
+    .hint { font-size:12px; color:#546e7a; }
+    .danger { color:#b00020; }
+  </style>
 </head>
 <body>
 <header>
@@ -49,28 +49,28 @@
     <div class="row">
       <div>
         <label>Reinigungsart</label>
-        <select id="cleanType" onchange="calcAll()">
+        <select id="cleanType">
           <option value="unterhalt">Unterhaltsreinigung (35 €/h)</option>
           <option value="sonder">Sonderreinigung (60 €/h)</option>
         </select>
       </div>
       <div>
         <label>Teamgröße</label>
-        <input id="teamSize" type="number" value="2" oninput="calcAll()">
+        <input id="teamSize" type="number" value="2">
       </div>
     </div>
     <div class="row-3" style="margin-top:8px;">
       <div>
         <label>Overhead %</label>
-        <input id="overhead" type="number" value="10" oninput="calcAll()">
+        <input id="overhead" type="number" value="10">
       </div>
       <div>
         <label>Gewinn %</label>
-        <input id="profit" type="number" value="15" oninput="calcAll()">
+        <input id="profit" type="number" value="15">
       </div>
       <div>
         <label>MwSt %</label>
-        <input id="vat" type="number" value="19" oninput="calcAll()">
+        <input id="vat" type="number" value="19">
       </div>
     </div>
   </div>
@@ -79,35 +79,35 @@
     <div class="row-3">
       <div>
         <label>Anfahrt (km, einfach)</label>
-        <input id="distanceKm" type="number" value="8" oninput="calcAll()">
+        <input id="distanceKm" type="number" value="8">
       </div>
       <div>
         <label>Geschwindigkeit (km/h)</label>
-        <input id="speed" type="number" value="35" oninput="calcAll()">
+        <input id="speed" type="number" value="35">
       </div>
       <div>
         <label>Park-/Zugangssuche (Min.)</label>
-        <input id="parkingMin" type="number" value="10" oninput="calcAll()">
+        <input id="parkingMin" type="number" value="10">
       </div>
     </div>
     <div class="row" style="margin-top:8px;">
       <div>
         <label>Material €/m²</label>
-        <input id="materialPerM2" type="number" value="0.5" oninput="calcAll()">
+        <input id="materialPerM2" type="number" value="0.5">
       </div>
       <div>
         <label>Maschinenpauschale €</label>
-        <input id="machineFee" type="number" value="8" oninput="calcAll()">
+        <input id="machineFee" type="number" value="8">
       </div>
       <div>
         <label>Standard-Rüstzeit (Min.)</label>
-        <input id="setupMin" type="number" value="15" oninput="calcAll()">
+        <input id="setupMin" type="number" value="15">
       </div>
     </div>
   </div>
 
   <div class="card">
-    <button type="button" class="btn" onclick="onAddRoom()">+ Raum hinzufügen</button>
+    <button type="button" class="btn" data-action="add-room">+ Raum hinzufügen</button>
     <div id="rooms"></div>
   </div>
 
@@ -118,11 +118,11 @@
     <div class="line"><div class="total">Gesamt (brutto)</div><div id="sumGross" class="total">0,00 €</div></div>
     <div class="line muted"><div>Gesamt-Arbeitszeit</div><div id="sumTime">0 Min</div></div>
     <div class="line muted"><div>Fertig in</div><div id="sumFinish">–</div></div>
-    <button type="button" class="btn ghost" onclick="window.print()">Als PDF drucken/teilen</button>
+    <button type="button" class="btn ghost" id="printBtn">Als PDF drucken/teilen</button>
     <div id="msg" class="muted" style="margin-top:8px;"></div>
   </div>
 
-  <p class="footer-note">Falls Buttons nicht reagieren: Stelle sicher, dass die Datei in **Safari/Chrome** geöffnet wird (nicht in einer Vorschau/Viewer-App). Tipp: „Teilen → In Dateien sichern → Antippen → Im Browser öffnen“.</p>
+  <p class="footer-note">Wenn etwas nicht reagiert: Seite neu laden. Diese Version nutzt **keine** Inline-Skripte (GitHub Pages kompatibel).</p>
 </div>
 
 <template id="roomTemplate">
@@ -132,11 +132,11 @@
     <div class="row-3">
       <div>
         <label>Raumname</label>
-        <input data-roomname type="text" placeholder="z. B. Bad EG" oninput="calcAll()">
+        <input data-roomname type="text" placeholder="z. B. Bad EG">
       </div>
       <div>
         <label>Raumtyp</label>
-        <select data-roomtype onchange="calcAll()">
+        <select data-roomtype>
           <option>Bad</option>
           <option>Küche</option>
           <option>Wohnraum</option>
@@ -148,13 +148,13 @@
       </div>
       <div>
         <label>Fläche (m²)</label>
-        <input data-area type="number" value="12" oninput="calcAll()">
+        <input data-area type="number" value="12">
       </div>
     </div>
     <div class="row-4" style="margin-top:8px;">
       <div>
         <label>Bodenart</label>
-        <select data-floor onchange="calcAll()">
+        <select data-floor>
           <option>Fliesen</option>
           <option>Teppich</option>
           <option>Parkett</option>
@@ -164,18 +164,18 @@
       </div>
       <div>
         <label>Fensterfläche (m²)</label>
-        <input data-windowm2 type="number" value="0" oninput="calcAll()">
+        <input data-windowm2 type="number" value="0">
       </div>
       <div>
         <label>Fenster-Min./m²</label>
-        <select data-windowmin onchange="calcAll()">
+        <select data-windowmin>
           <option value="2.0">2.0 (innen)</option>
           <option value="3.5" selected>3.5 (beidseitig)</option>
         </select>
       </div>
       <div>
         <label>Verschmutzungsgrad</label>
-        <select data-soil onchange="calcAll()">
+        <select data-soil>
           <option>S1</option>
           <option>S2</option>
           <option selected>S3</option>
@@ -185,8 +185,8 @@
       </div>
     </div>
     <div class="line" style="margin-top:8px;">
-      <button type="button" class="btn flat" onclick="onAiSuggest(this)">KI-Vorschlag (S1–S5)</button>
-      <button type="button" class="btn secondary" onclick="onAddImages(this)">Fotos hinzufügen</button>
+      <button type="button" class="btn flat" data-action="ai-suggest">KI-Vorschlag (S1–S5)</button>
+      <button type="button" class="btn secondary" data-action="add-images">Fotos hinzufügen</button>
       <span class="muted" data-aiNote></span>
     </div>
     <details style="margin-top:8px;">
@@ -194,19 +194,19 @@
       <div class="row-4" style="margin-top:8px;">
         <div>
           <label>Sonderaufgaben (Min.)</label>
-          <input data-special type="number" value="0" oninput="calcAll()">
+          <input data-special type="number" value="0">
         </div>
         <div>
           <label>Zusätzliche Rüstzeit (Min.)</label>
-          <input data-setup type="number" value="0" oninput="calcAll()">
+          <input data-setup type="number" value="0">
         </div>
         <div>
           <label>Material €/m² (Raum)</label>
-          <input data-matm2 type="number" placeholder="leer = Standard" oninput="calcAll()">
+          <input data-matm2 type="number" placeholder="leer = Standard">
         </div>
         <div>
           <label>Maschinenpauschale € (Raum)</label>
-          <input data-macfee type="number" placeholder="leer = Standard" oninput="calcAll()">
+          <input data-macfee type="number" placeholder="leer = Standard">
         </div>
       </div>
     </details>
@@ -230,201 +230,6 @@
   </div>
 </template>
 
-<script>
-// === Konstanten ===
-const HOURLY = { unterhalt: 35, sonder: 60 };
-const SOIL = { S1: 0.8, S2: 1.0, S3: 1.3, S4: 1.7, S5: 2.2 };
-const BASE_MIN = { Büro: 1.2, Bad: 2.5, Küche: 2.2, Flur: 0.8, Wohnraum: 1.0, Treppenhaus: 1.5, Sonstiges: 1.2 };
-const FLOOR_MUL = { Fliesen: 1.0, Teppich: 1.3, Parkett: 1.1, PVC: 1.0, Naturstein: 1.4 };
-
-// === Globale Daten ===
-let rooms = [];
-
-// === Utils ===
-const € = (v)=> (v||0).toLocaleString('de-DE',{minimumFractionDigits:2,maximumFractionDigits:2});
-function minToHH(min){ if(!min||min<=0) return '–'; const h=Math.floor(min/60), m=Math.round(min%60); return `${h}h ${m}m`; }
-function q(sel, root=document){ return root.querySelector(sel); }
-function qa(sel, root=document){ return Array.from(root.querySelectorAll(sel)); }
-function closestRoom(el){ return el.closest('.room'); }
-function num(id, def=0){ const el=document.getElementById(id); const v=parseFloat(el?.value); return isNaN(v)?def:v; }
-
-// === Raum hinzufügen ===
-function onAddRoom(){
-  try{
-    const tpl = q('#roomTemplate');
-    const node = tpl.content.firstElementChild.cloneNode(true);
-    q('#rooms').appendChild(node);
-    rooms.push(node);
-    calcAll();
-    showMsg('Raum hinzugefügt.');
-  } catch(e){
-    showMsg('Fehler beim Hinzufügen des Raums.', true);
-    console.error(e);
-  }
-}
-
-// === Bilder hinzufügen (Button im Raum) ===
-function onAddImages(btn){
-  const room = closestRoom(btn);
-  if (!room) return;
-  const picker = document.createElement('input');
-  picker.type = 'file'; picker.accept = 'image/*'; picker.multiple = true;
-  picker.onchange = async ()=>{
-    for (const f of picker.files){
-      const url = await fileToDataURL(f);
-      const img = new Image(); img.src = url; q('[data-thumbs]', room).appendChild(img);
-      // Speichere Base64 im Dataset (einfach)
-      const arr = JSON.parse(room.dataset.images||'[]'); arr.push(url); room.dataset.images = JSON.stringify(arr);
-    }
-    calcAll();
-  };
-  picker.click();
-}
-
-// === KI-Vorschlag (heuristisch, offline) ===
-async function onAiSuggest(btn){
-  const room = closestRoom(btn);
-  const note = q('[data-aiNote]', room);
-  try{
-    const images = JSON.parse(room.dataset.images||'[]');
-    if(!images.length){ note.textContent = 'Bitte zuerst Fotos hinzufügen.'; return; }
-    note.textContent = 'Analysiere Fotos ...';
-    const take = images.slice(0,5);
-    let scores = [];
-    for (const src of take){
-      const img = await loadImage(src);
-      const {avgLum, stdLum, avgSat} = analyzeImage(img, 192);
-      let score = 0.6*norm(stdLum, 0, 80) + 0.2*(1 - norm(avgLum, 20, 220)) + 0.2*norm(avgSat, 0, 120);
-      scores.push(score);
-    }
-    const s = scores.sort((a,b)=>b-a)[0];
-    const grade = scoreToS(s);
-    q('[data-soil]', room).value = grade;
-    note.textContent = 'Vorschlag: ' + grade;
-    calcAll();
-  } catch(e){
-    note.textContent = 'KI-Vorschlag nicht möglich.';
-    console.error(e);
-  }
-}
-
-// === Bildanalyse Helpers ===
-function norm(v, lo, hi){ const x = (v - lo)/(hi - lo); return Math.max(0, Math.min(1, x)); }
-function scoreToS(score){ if(score<0.18) return 'S1'; if(score<0.36) return 'S2'; if(score<0.58) return 'S3'; if(score<0.78) return 'S4'; return 'S5'; }
-function loadImage(src){ return new Promise((res, rej)=>{ const i=new Image(); i.onload=()=>res(i); i.onerror=rej; i.src=src; }); }
-function analyzeImage(img, size){
-  const c=document.createElement('canvas'); const ctx=c.getContext('2d', { willReadFrequently: true });
-  c.width=size; c.height=size;
-  const ratio=Math.max(size/img.width, size/img.height);
-  const w=img.width*ratio, h=img.height*ratio;
-  const x=(size-w)/2, y=(size-h)/2;
-  ctx.drawImage(img, x, y, w, h);
-  const {data}=ctx.getImageData(0,0,size,size);
-  let sumL=0, sumL2=0, sumSat=0, n=size*size;
-  for(let i=0;i<data.length;i+=4){
-    const r=data[i], g=data[i+1], b=data[i+2];
-    const lum=0.2126*r + 0.7152*g + 0.0722*b;
-    const maxc=Math.max(r,g,b), minc=Math.min(r,g,b);
-    const sat=maxc===0?0:(maxc-minc);
-    sumL+=lum; sumL2+=lum*lum; sumSat+=sat;
-  }
-  const avgLum=sumL/n;
-  const stdLum=Math.sqrt(sumL2/n - avgLum*avgLum);
-  const avgSat=sumSat/n;
-  return {avgLum,stdLum,avgSat};
-}
-
-function fileToDataURL(file){
-  return new Promise((res, rej)=>{ const r=new FileReader(); r.onload=()=>res(r.result); r.onerror=rej; r.readAsDataURL(file); });
-}
-
-// === Kalkulation ===
-function calcAll(){
-  try{
-    let sumNet=0, sumVat=0, sumGross=0, sumTime=0;
-    const team=Math.max(1, parseInt(q('#teamSize').value||'1',10));
-    qa('.room').forEach(room=>{
-      const r=readRoom(room);
-      const result=calcRoom(r);
-      writeRoom(room, result);
-      sumNet+=result.net; sumVat+=result.vat; sumGross+=result.gross; sumTime+=result.timeMin;
-    });
-    q('#sumNet').textContent = €(sumNet);
-    q('#sumVat').textContent = €(sumVat);
-    q('#sumGross').textContent = €(sumGross);
-    q('#sumTime').textContent = Math.round(sumTime) + ' Min';
-    const finish = sumTime/60/team;
-    q('#sumFinish').textContent = finish>0 ? (finish.toLocaleString('de-DE',{maximumFractionDigits:2}) + ' Std (Team ' + team + ')') : '–';
-  } catch(e){
-    showMsg('Fehler bei der Berechnung.', true);
-    console.error(e);
-  }
-}
-
-function readRoom(room){
-  return {
-    cleanType: q('#cleanType').value,
-    overhead: parseFloat(q('#overhead').value||'10')/100,
-    profit: parseFloat(q('#profit').value||'15')/100,
-    vat: parseFloat(q('#vat').value||'19')/100,
-    materialPerM2: parseFloat(q('#materialPerM2').value||'0')||0,
-    machineFee: parseFloat(q('#machineFee').value||'0')||0,
-    setupMin: parseFloat(q('#setupMin').value||'0')||0,
-    distanceKm: parseFloat(q('#distanceKm').value||'0')||0,
-    speed: Math.max(1, parseFloat(q('#speed').value||'35')),
-    parkingMin: parseFloat(q('#parkingMin').value||'0')||0,
-    area: parseFloat(q('[data-area]', room).value||'0')||0,
-    roomtype: q('[data-roomtype]', room).value,
-    floor: q('[data-floor]', room).value,
-    soil: q('[data-soil]', room).value,
-    windowm2: parseFloat(q('[data-windowm2]', room).value||'0')||0,
-    windowmin: parseFloat(q('[data-windowmin]', room).value||'0')||0,
-    special: parseFloat(q('[data-special]', room)?.value||'0')||0,
-    setupExtra: parseFloat(q('[data-setup]', room)?.value||'0')||0
-  };
-}
-function calcRoom(r){
-  const hourly = HOURLY[r.cleanType] || 35;
-  const base = BASE_MIN[r.roomtype] || 1.2;
-  const floorMul = FLOOR_MUL[r.floor] || 1.0;
-  const soilMul = SOIL[r.soil] || 1.0;
-
-  const travelMin = (r.distanceKm*2 / r.speed)*60;
-  const timeClean = r.area*base*floorMul*soilMul + r.windowm2*r.windowmin + r.special + (r.setupMin + r.setupExtra) + travelMin + r.parkingMin;
-  const laborCost = (timeClean/60)*hourly;
-  const materialCost = r.area*r.materialPerM2 + r.machineFee;
-  const overhead = (laborCost + materialCost)*r.overhead;
-  const profit = (laborCost + materialCost + overhead)*r.profit;
-  const net = laborCost + materialCost + overhead + profit;
-  const vat = net*r.vat;
-  const gross = net + vat;
-
-  return { timeMin: timeClean, laborCost, materialCost, overhead, profit, net, vat, gross };
-}
-function writeRoom(room, res){
-  q('[data-time]', room).textContent = Math.round(res.timeMin);
-  q('[data-labor]', room).textContent = €(res.laborCost);
-  q('[data-mat]', room).textContent = €(res.materialCost);
-  q('[data-oh]', room).textContent = €(res.overhead);
-  q('[data-profit]', room).textContent = €(res.profit);
-  q('[data-net]', room).textContent = €(res.net);
-  q('[data-gross]', room).textContent = €(res.gross);
-  const team = Math.max(1, parseInt(q('#teamSize').value||'1',10));
-  q('[data-finish]', room).textContent = minToHH(res.timeMin/team);
-  const rn = q('[data-roomname]', room).value||'Raum';
-  const rt = q('[data-roomtype]', room).value||'';
-  q('.room-title', room).textContent = rn + ' · ' + rt;
-}
-
-function showMsg(text, isErr=false){
-  const m=q('#msg'); m.textContent = text; m.className = 'muted' + (isErr?' danger':'');
-  setTimeout(()=>{ m.textContent=''; }, 3000);
-}
-
-// Init: einen Raum anlegen
-document.addEventListener('DOMContentLoaded', ()=>{
-  onAddRoom();
-});
-</script>
+<script src="app.js" defer></script>
 </body>
 </html>
